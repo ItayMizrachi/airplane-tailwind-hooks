@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const HeaderMenu = () => {
   return (
-    <div className=" relative md:hidden">
-      <div className=" absolute top-8 right-0 z-10 min-w-52 bg-white min-h-[200px] p-3 border rounded-lg">
-        <div className="bg-gray-200 rounded-full p-2 items-center flex flex-grow ">
+    <div className="lg:hidden">
+      <div className="fixed top-15 right-0 z-10 min-w-52 bg-white min-h-[200px] p-3 border rounded-lg">
+        <div className="bg-gray-200 rounded-full p-2 items-center flex md:hidden">
           <MagnifyingGlassIcon className="h-6" />
           <input
             type="text"
