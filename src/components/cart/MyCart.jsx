@@ -1,8 +1,10 @@
-import { useCartStore } from "../../store/cart-store";
+import { useCartSelectors } from "../../store/cart-store";
 
 const MyCart = () => {
-  const cart = useCartStore((state) => state.cart);
-  const removeFromCart = useCartStore((state) => state.removeFromCart);
+  const cart = useCartSelectors.use.cart();
+  const removeFromCart = useCartSelectors.use.removeFromCart();
+  //   const cart = useCartStore((state) => state.cart);
+  //   const removeFromCart = useCartStore((state) => state.removeFromCart);
 
   return (
     <div className="bg-gray-100 p-4 rounded-lg mt-4">

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useCartStore } from "../../store/cart-store";
+import { useCartSelectors } from "../../store/cart-store";
 import MyCart from "./MyCart";
 
 const CartStore = () => {
@@ -15,9 +15,12 @@ const CartStore = () => {
     { id: 3, name: "Product 3", price: 30 },
   ];
 
-  const cart = useCartStore((state) => state.cart);
-  const addToCart = useCartStore((state) => state.addToCart);
-  const clearCart = useCartStore((state) => state.clearCart);
+  const cart = useCartSelectors.use.cart();
+  const addToCart = useCartSelectors.use.addToCart();
+  const clearCart = useCartSelectors.use.clearCart();
+  // const cart = useCartStore((state) => state.cart);
+  // const addToCart = useCartStore((state) => state.addToCart);
+  // const clearCart = useCartStore((state) => state.clearCart);
 
   useEffect(() => {
     console.table(cart);

@@ -1,18 +1,7 @@
-// import { create } from "zustand";
-
-// export const useCartStore = create((set) => ({
-//   cart: [],
-//   addToCart: (product) => set((state) => ({ cart: [...state.cart, product] })),
-//   removeFromCart: (productId) =>
-//     set((state) => ({
-//       cart: state.cart.filter((prod) => prod.id !== productId),
-//     })),
-//   clearCart: () => set({ cart: [] }),
-// }));
-
 import { create } from "zustand";
+import { createSelectors } from "./create-selectors";
 
-export const useCartStore = create((set) => ({
+const useCartStore = create((set) => ({
   cart: JSON.parse(localStorage.getItem("cart")) || [],
   addToCart: (product) =>
     set((state) => {
@@ -32,3 +21,17 @@ export const useCartStore = create((set) => ({
       return { cart: [] };
     }),
 }));
+
+export const useCartSelectors = createSelectors(useCartStore);
+export default useCartStore;
+
+// WITHOUT LOCALSTORAGE
+// export const useCartStore = create((set) => ({
+//   cart: [],
+//   addToCart: (product) => set((state) => ({ cart: [...state.cart, product] })),
+//   removeFromCart: (productId) =>
+//     set((state) => ({
+//       cart: state.cart.filter((prod) => prod.id !== productId),
+//     })),
+//   clearCart: () => set({ cart: [] }),
+// }));
