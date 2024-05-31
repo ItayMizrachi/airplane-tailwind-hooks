@@ -7,13 +7,18 @@ import Users from "./components/Users";
 import Todos from "./components/Todos";
 import Gallery from "./components/Gallery";
 import HeaderGrid from "./components/HeaderGrid";
+import { useCounterStore } from "./store";
 
 const App = () => {
+  const count = useCounterStore((state) => state.count);
+
+  console.log(count);
   return (
     <>
       <BrowserRouter>
         <HeaderGrid />
         <Airplane />
+        <div className="bg-red-500 h-50 my-10">{count}</div>
         <Routes>
           <Route index element={<Home />} />
           <Route path="/posts" element={<Posts />} />
