@@ -29,6 +29,9 @@ const HeaderMenu = () => {
           <li className="res-btn">
             <Link to="/gallery">Gallery</Link>
           </li>
+          <li className="res-btn">
+            <Link to="/cartstore">CartStore</Link>
+          </li>
         </ul>
       </div>
     </div>

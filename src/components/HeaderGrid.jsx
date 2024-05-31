@@ -36,6 +36,9 @@ const HeaderGrid = () => {
             <Link to="/gallery" className="nav-btn">
               Gallery
             </Link>
+            <Link to="/cartstore" className="nav-btn">
+              CartStore
+            </Link>
           </ul>
         </div>
         {/* right */}
