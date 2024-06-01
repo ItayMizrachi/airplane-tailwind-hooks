@@ -9,6 +9,7 @@ import Gallery from "./components/Gallery";
 import HeaderGrid from "./components/HeaderGrid";
 import CartStore from "./components/cart/CartStore";
 import { useStoreSelectors } from "./store/store";
+import Combine from "./components/Combine";
 
 const App = () => {
   const increment = useStoreSelectors.use.increment();
@@ -33,6 +34,7 @@ const App = () => {
         <h2 className="text-center mt-5 font-semibold text-2xl">
           Count: {count}
         </h2>
+        <Combine />
         <Routes>
           <Route index element={<Home />} />
           <Route path="/posts" element={<Posts />} />

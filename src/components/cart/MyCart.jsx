@@ -1,8 +1,8 @@
-import { useCartSelectors } from "../../store/cart-store";
+import { useBoundSelectors } from "../combined-stores/combined-stores";
 
 const MyCart = () => {
-  const cart = useCartSelectors.use.cart();
-  const removeFromCart = useCartSelectors.use.removeFromCart();
+  const cart = useBoundSelectors.use.cart();
+  const removeFromCart = useBoundSelectors.use.removeFromCart();
   //   const cart = useCartStore((state) => state.cart);
   //   const removeFromCart = useCartStore((state) => state.removeFromCart);
 
