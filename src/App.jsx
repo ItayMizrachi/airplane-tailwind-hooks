@@ -10,6 +10,7 @@ import HeaderGrid from "./components/HeaderGrid";
 import CartStore from "./components/cart/CartStore";
 import { useStoreSelectors } from "./store/store";
 import Combine from "./components/Combine";
+import Form from "./components/Form";
 
 const App = () => {
   const increment = useStoreSelectors.use.increment();
@@ -56,6 +57,7 @@ const App = () => {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/cartstore" element={<CartStore />} />
         </Routes>
+        <Form />
       </BrowserRouter>
       <Footer />
     </>
