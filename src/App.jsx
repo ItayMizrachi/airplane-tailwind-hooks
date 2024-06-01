@@ -15,6 +15,19 @@ const App = () => {
   const increment = useStoreSelectors.use.increment();
   const decrement = useStoreSelectors.use.decrement();
   const count = useStoreSelectors.use.count();
+
+  //callback example , print calls sum the callback function
+  const print = (cb) => {
+    let a = 2;
+    let b = 3;
+    let s = cb(a, b);
+    return s;
+  };
+
+  const sum = (a, b) => a + b;
+
+  console.log(print(sum));
+
   return (
     <>
       <BrowserRouter>
