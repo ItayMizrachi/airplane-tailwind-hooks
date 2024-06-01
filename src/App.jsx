@@ -12,6 +12,7 @@ import { useStoreSelectors } from "./store/store";
 import Combine from "./components/Combine";
 import Form from "./components/Form";
 import Memo2 from "./components/Memo2";
+import Ref from "./components/Ref";
 
 const App = () => {
   const increment = useStoreSelectors.use.increment();
@@ -61,6 +62,7 @@ const App = () => {
         {/* <Memo /> */}
         <Memo2 />
         <Form />
+        <Ref />
       </BrowserRouter>
       <Footer />
     </>
