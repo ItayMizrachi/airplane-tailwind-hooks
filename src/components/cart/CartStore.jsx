@@ -2,18 +2,18 @@ import { useEffect } from "react";
 import { useCartSelectors } from "../../store/cart-store";
 import MyCart from "./MyCart";
 
+const dummyCart = [
+  { id: 1, name: "Product 1", price: 10 },
+  { id: 2, name: "Product 2", price: 20 },
+  { id: 3, name: "Product 3", price: 30 },
+];
+
 const CartStore = () => {
   //   const { cart, removeFromCart, clearCart } = useCartStore((state) => ({
   //     cart: state.cart,
   //     removeFromCart: state.removeFromCart,
   //     clearCart: state.clearCart,
   //   }));
-
-  const dummyCart = [
-    { id: 1, name: "Product 1", price: 10 },
-    { id: 2, name: "Product 2", price: 20 },
-    { id: 3, name: "Product 3", price: 30 },
-  ];
 
   const cart = useCartSelectors.use.cart();
   const addToCart = useCartSelectors.use.addToCart();
